@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+.col-05{width: 4.16%;}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-115{width: 95.83%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    vertical-align: baseline;
+    /*
+    border: 1px solid red;
+    /**/
+}
+
+
+/* 
+[class*="col-"] [class*="col-"] {
+    padding: 0px;
+}
+/* */
+
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.row {
+	vertical-align: center;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0px;
+	padding: 0px;
+}
+
+.right-text {
+	text-align: right;
+}
+
+.center-text {
+    text-align: center;
+}
+
+input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+
+    /* Don't display padding elements on small screens */
+    .filler {
+        display: none;
+    }
+    .col-05{width: 5%;}
+    .col-115{width: 95%;}
+
+    .meta-key [class*="col-"]{
+        width: auto;
+    }
+    .meta-key{width: 35%;}
+    .meta-value{width: 65%;}
+}

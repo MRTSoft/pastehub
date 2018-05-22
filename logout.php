@@ -1,0 +1,11 @@
+<?php
+	//session_destroy();
+	if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    }
+	unset($_SESSION['uid']);
+	unset($_SESSION['uname']);
+	session_destroy();
+	die();
+?>
